@@ -1,0 +1,31 @@
+{
+    "name": "StaffManagement",
+    "group": "admin",
+    "url": "staff_management",
+    "icon": "fa fa-users",
+    "color": "#17a2b8",
+    "background": "rgba(22, 160, 133, 0.1)",
+    "permissions": [
+        "create-staff",
+        "read-staff",
+        "update-staff",
+        "delete-staff",
+        "create-staff-card",
+        "read-staff-card",
+        "update-staff-card",
+        "delete-staff-card",
+        "create-employment",
+        "read-employment",
+        "update-employment",
+        "delete-employment",
+        "create-appointment",
+        "read-appointment",
+        "update-appointment",
+        "delete-appointment",
+        "create-staff-report",
+        "read-staff-report",
+        "update-staff-report",
+        "delete-staff-report",
+        "execute-staff-settings"
+    ]
+}

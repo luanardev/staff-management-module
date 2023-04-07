@@ -1,0 +1,27 @@
+{
+    "name": "luanardev/staff-management-module",
+    "type": "laravel-module",
+    "description": "Staff Management Module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Simpokolwe",
+            "email": "bsimpokolwe@luanar.ac.mw"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lumis\\StaffManagement\\Providers\\StaffManagementServiceProvider"
+            ],
+            "aliases": {
+                "StaffConfig": "Lumis\\StaffManagement\\Facades\\StaffConfig"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Lumis\\StaffManagement\\": ""
+        }
+    }
+}

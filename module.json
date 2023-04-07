@@ -1,0 +1,15 @@
+{
+    "name": "StaffManagement",
+    "alias": "staffmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 3,
+    "providers": [
+        "Lumis\\StaffManagement\\Providers\\StaffManagementServiceProvider"
+    ],
+    "aliases": {
+        "StaffConfig": "Lumis\\StaffManagement\\Facades\\StaffConfig"
+    },
+    "files": [],
+    "requires": []
+}
