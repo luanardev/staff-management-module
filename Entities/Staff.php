@@ -310,9 +310,9 @@ class Staff extends Model
 
     /**
      * Search Scope for Laravel Livewire DataTable
-     * @return Builder
-     * @var string $term
      * @var Builder $query
+     * @var string $term
+     * @return Builder
      */
     public function scopeSearch(Builder $query, string $term): Builder
     {
