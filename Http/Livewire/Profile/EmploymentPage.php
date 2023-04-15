@@ -41,7 +41,7 @@ class EmploymentPage extends LivewireUI
         $this->with('positions', Position::pluck('id', 'name')->flip()->toArray());
         $this->with('departments', Department::pluck('id', 'name')->flip()->toArray());
         $this->with('sections', Section::pluck('id', 'name')->flip()->toArray());
-        $this->with('campuses', Campus::getByUser()->pluck('id', 'name')->flip()->toArray());
+        $this->with('campuses', Campus::pluck('id', 'name')->flip()->toArray());
         $this->with('grades', JobGrade::pluck('name')->toArray());
         $this->with('types', JobType::pluck('id', 'name')->flip()->toArray());
         $this->with('categories', JobCategory::pluck('id', 'name')->flip()->toArray());
