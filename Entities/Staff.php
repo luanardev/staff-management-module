@@ -125,7 +125,7 @@ class Staff extends Model
      */
     public static function search(string $term): Builder
     {
-        return static::where('id', 'like', "%{$term}%")
+        return static::where('employee_number', 'like', "%{$term}%")
             ->orwhere('national_id', 'like', "%{$term}%")
             ->orWhere('firstname', 'like', "%{$term}%")
             ->orWhere('lastname', 'like', "%{$term}%");
