@@ -2,6 +2,7 @@
 
 namespace Lumis\StaffManagement\Observers;
 
+use App\Models\User;
 use Illuminate\Support\Str;
 use Lumis\StaffManagement\Entities\Employment;
 use Lumis\StaffManagement\Entities\Progress;
@@ -105,7 +106,9 @@ class EmploymentObserver
         }
         if ($employment->wasChanged('job_type_id')) {
             $this->changeEmploymentType($employment);
-
+        }
+		if ($employment->wasChanged('campus_id')) {
+            $this->changeCampus($employment);
         }
     }
 
@@ -177,6 +180,20 @@ class EmploymentObserver
             $employment->revertToNonPermanent();
             $this->updateProgress($employment);
         }
+
+    }
+	
+	/**
+     * Change Campus
+     *
+     * @param Employment $employment
+     * @return void
+     */
+    protected function changeCampus(Employment $employment): void
+    {
+        $user = User::getByStaffId($employment->staff_id);
+		$user->setCampus($employment->campus_id);
+		$user->save();
 
     }
 
