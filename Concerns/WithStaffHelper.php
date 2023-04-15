@@ -52,7 +52,7 @@ trait WithStaffHelper
     /**
      * @return string
      */
-    public function genderism(): string
+    public function pronoun(): string
     {
         if ($this->gender == 'Male' || $this->gender == 'M') {
             return 'He';
@@ -60,6 +60,20 @@ trait WithStaffHelper
             return 'She';
         } else {
             return 'They';
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function possessivePronoun(): string
+    {
+        if ($this->gender == 'Male' || $this->gender == 'M') {
+            return 'His';
+        } elseif ($this->gender == 'Female' || $this->gender == 'F') {
+            return 'Her';
+        } else {
+            return 'Their';
         }
     }
 
